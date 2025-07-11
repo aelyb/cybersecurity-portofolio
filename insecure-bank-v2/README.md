@@ -1,7 +1,21 @@
-🔓 InsecureBankV2 – Android Mobile Penetration Testing
+# InsecureBankV2 – Android Mobile Penetration Testing
 
-This project demonstrates a penetration test on the InsecureBankV2 Android application as part of a mobile penetration testing final project. Static analysis was performed to uncover critical vulnerabilities including insecure logging, developer backdoor, Exploiting Android Content Provider, Exploiting Android Activities, and Exploiting Android Backup Functionality.
+This project presents a comprehensive penetration test on the Android-based InsecureBankV2 application, conducted as part of a secure programming final assessment. Each team member focused on specific components mapped to OWASP MASVS/MSTG attack surfaces.
 
-The findings were analyzed, scored using CVSS v3.1, and documented along with detailed remediation steps.
+### 🔍 Scope of Assessment
+- Insecure Logging of user credentials
+- Developer Backdoor allowing auth bypass
+- Exploitable Android Content Provider
+- Unauthorized activity access via exported components
+- Backup functionality abuse and credentials decryption
 
-📄 See the PDF file for full documentation and results.
+### ✅ Key Findings
+- Sensitive user data such as usernames and passwords were found logged insecurely using `Logcat`.
+- A hardcoded backdoor (`/devlogin`) allowed login bypass with any credentials.
+- The app exposed its `ContentProvider`, allowing unauthorized query of user data.
+- An exported `PostLogin` activity could be launched directly to bypass authentication.
+- Backup files included Base64-encoded and AES-encrypted credentials, easily decrypted using a hardcoded key.
+
+Each vulnerability was analyzed using tools such as **JADX**, **Frida**, **Apktool**, and **Android Emulator**, with CVSS v3.1 scores and remediation suggestions provided for every issue.
+
+📄 See the PDF file for the full technical documentation and exploitation steps.
