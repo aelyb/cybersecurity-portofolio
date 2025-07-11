@@ -1,6 +1,6 @@
 # InsecureBankV2 – Android Mobile Penetration Testing
 
-This project presents a comprehensive penetration test on the Android-based InsecureBankV2 application, conducted as part of a secure programming final assessment. Each team member focused on specific components mapped to OWASP MASVS/MSTG attack surfaces.
+This project presents a comprehensive penetration test on the Android-based InsecureBankV2 application, conducted as part of a mobile penetration testing final assessment. Each team member focused on specific components mapped to OWASP MASVS/MSTG attack surfaces.
 
 ### 🔍 Scope of Assessment
 - Insecure Logging of user credentials
