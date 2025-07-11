@@ -1,7 +1,17 @@
-# Mail V2 APK – Exploitation & Defensive Strategy
+# Competitor Mail V2 – APK Analysis & Exploit Evaluation
 
-In this project, a third-party Android APK was analyzed from both offensive and defensive perspectives. The testing process included root detection bypass, intent injection, and assessment of insecure components.
+This project was conducted as part of a mobile penetration testing final exam. The objective was to analyze and evaluate the security of a competitor’s Android mail application using static and dynamic techniques.
 
-Proposed security enhancements such as SSL pinning, code obfuscation, and hardening of debug configurations were included as part of the defense strategy.
+### 🔍 Scope of Assessment
+- Rooted Device and Emulator Detection (bypass attempt)
+- Message Duplication via Email Function
+- SharedPreferences Data Exposure
+- Intent Forgery via LocalBroadcastManager
 
-📄 See the PDF file for technical findings and hardening recommendations.
+### ✅ Key Findings
+- **Root Detection**: App uses RootBeer for checking rooted devices; analysis of `RootCheckService` and `EmulatorCheckService` conducted. Frida instrumentation was attempted but resulted in runtime errors.
+- **Other Features**: Email message duplication, SharedPreferences access, and forged Intent injection were analyzed and determined **not exploitable** based on code behavior and limitations.
+
+The report includes technical steps using tools like **JADX**, **Frida**, and **Android Emulator**, as well as annotated screenshots and method analysis.
+
+📄 See the PDF file for the full assessment and technical evidence.
